@@ -36,7 +36,7 @@ conda install scipy numpy matplotlib pandas scikit-learn jupyter ipykernel nb_co
 
 Make sure you have python (>=3.5) installed on your system. Now install the required packages:
 ```
-python3 -m pip install torch torchvision torchaudio tensorboard python-wget scipy numpy matplotlib pandas scikit-learn jupyter ipykernel nb_conda_kernels
+python3 -m pip install torch torchvision torchaudio tensorboard wget scipy numpy matplotlib pandas scikit-learn jupyter ipykernel nb_conda_kernels
 ```
 
 ### Step 3
