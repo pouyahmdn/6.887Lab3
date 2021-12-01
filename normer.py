@@ -1,10 +1,10 @@
-from sklearn.preprocessing import Normalizer
+from sklearn.preprocessing import StandardScaler
 import pickle
 from buffer import TransitionBuffer
 
 
 def create_normer():
-    transformer = Normalizer()
+    transformer = StandardScaler()
     np.random.seed(123)
     env = ABRSimEnv(123)
 
@@ -32,7 +32,7 @@ def create_normer():
 
     all_states, all_next_states, all_actions_np, all_rewards, all_dones = buff.get()
 
-    transformer.fit_transform(all_states)
+    transformer.fit(all_states)
 
     with open('normer.pkl', 'wb') as fandle:
         pickle.dump(transformer, fandle)
